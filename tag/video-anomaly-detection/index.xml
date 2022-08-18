@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Video Anomaly Detection | Aniello Panariello</title>
+    <link>https://apanariello4.github.io/tag/video-anomaly-detection/</link>
+      <atom:link href="https://apanariello4.github.io/tag/video-anomaly-detection/index.xml" rel="self" type="application/rss+xml" />
+    <description>Video Anomaly Detection</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://apanariello4.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Video Anomaly Detection</title>
+      <link>https://apanariello4.github.io/tag/video-anomaly-detection/</link>
+    </image>
+    
+    <item>
+      <title>Consistency-based Self-supervised Learning for Temporal Anomaly Localization</title>
+      <link>https://apanariello4.github.io/publication/consistency2022panariello/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://apanariello4.github.io/publication/consistency2022panariello/</guid>
+      <description>&lt;!--
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

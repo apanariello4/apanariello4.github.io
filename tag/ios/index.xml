@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iOS | Aniello Panariello</title>
+    <link>https://apanariello4.github.io/tag/ios/</link>
+      <atom:link href="https://apanariello4.github.io/tag/ios/index.xml" rel="self" type="application/rss+xml" />
+    <description>iOS</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://apanariello4.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>iOS</title>
+      <link>https://apanariello4.github.io/tag/ios/</link>
+    </image>
+    
+    <item>
+      <title>ARPosture</title>
+      <link>https://apanariello4.github.io/project/arposture/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://apanariello4.github.io/project/arposture/</guid>
+      <description>&lt;h1 id=&#34;arposture&#34;&gt;ARPosture&lt;/h1&gt;
+&lt;p&gt;ARPosture is an app that uses the ARKit framework to get the user&amp;rsquo;s head position in the world from the frontal camera of iPhone X and successive iPhones.&lt;/p&gt;
+&lt;h2 id=&#34;main-features&#34;&gt;Main features:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Absolute and relative head inclination.&lt;/li&gt;
+&lt;li&gt;Smartphone inclination.&lt;/li&gt;
+&lt;li&gt;Absolute and relative head tilt.&lt;/li&gt;
+&lt;li&gt;Distance from device.&lt;/li&gt;
+&lt;li&gt;Posture evaluation.&lt;/li&gt;
+&lt;li&gt;Correct posture balance.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

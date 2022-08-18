@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT | Aniello Panariello</title>
+    <link>https://apanariello4.github.io/tag/iot/</link>
+      <atom:link href="https://apanariello4.github.io/tag/iot/index.xml" rel="self" type="application/rss+xml" />
+    <description>IoT</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 18 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://apanariello4.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>IoT</title>
+      <link>https://apanariello4.github.io/tag/iot/</link>
+    </image>
+    
+    <item>
+      <title>Clean Air</title>
+      <link>https://apanariello4.github.io/project/clean_air/</link>
+      <pubDate>Tue, 18 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://apanariello4.github.io/project/clean_air/</guid>
+      <description>&lt;p&gt;&lt;em&gt;IoT &amp;amp; 3D intelligent systems project 2020-2021&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Clean Air&lt;/strong&gt; is a automatic system able to keep the internal air quality at best possible level, measuring the internal CO&lt;sub&gt;2&lt;/sub&gt; and the external PM10 and PM25. It opens the windows when the volume of CO&lt;sub&gt;2&lt;/sub&gt; is high and the PMs values are low enough.&lt;/p&gt;
+&lt;h2 id=&#34;structure&#34;&gt;Structure&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Codebase&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Database&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;SQLite&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Web App Backend&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Python/Flask&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Web App Frontend&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Jinja2/Javascript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android App&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Java&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Predictions&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Prophet&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Window Controller&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Arduino/C++&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Communications&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HTTP/MQTT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;web-app&#34;&gt;Web App&lt;/h2&gt;
+&lt;p&gt;The Web App is the centre of this system. The backend part manages the database and all the requests, while in the frontend is possible to manage ones dispositives and remotely activate them.&lt;/p&gt;
+&lt;h2 id=&#34;android-app&#34;&gt;Android App&lt;/h2&gt;
+&lt;p&gt;The Smartphone Client let us add new devices to our profile via QRCode and manage them.&lt;/p&gt;
+&lt;img src=&#34;https://github.com/apanariello4/iot-clean-air/raw/main/imgs/androidapp.png&#34; width=&#34;300&#34;&gt;
+&lt;h2 id=&#34;predictions&#34;&gt;Predictions&lt;/h2&gt;
+&lt;p&gt;Our system is also able to predict PM10 and PM25 pollution values in order to keep the window close even before that the air quality starts worsening. To train the model we use Prophet with open source datasets of italian cities. In production the datasets keep growing thanks to the sensors and the model keeps getting retrined and fine tuned.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
