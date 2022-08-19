@@ -57,6 +57,179 @@ Supplementary notes can be added here, including [code, math, and images](https:
     </item>
     
     <item>
+      <title>Annular Structures</title>
+      <link>https://apanariello4.github.io/project/annular/</link>
+      <pubDate>Tue, 18 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://apanariello4.github.io/project/annular/</guid>
+      <description>&lt;h1 id=&#34;annular-structures-in-netlogo-inspired-by-brood-sorting-in-ant-colonies&#34;&gt;Annular Structures in NetLogo Inspired by Brood Sorting in Ant Colonies&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Distributed Artificial Intelligence project 2020/2021&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This project is a simulation of the annular structures that emerge from the &lt;em&gt;Lepthotorax&lt;/em&gt; ants behaviors which is an example of swarm intelligence.&lt;/p&gt;
+&lt;p&gt;For more information, read the slides &lt;a href=&#34;https://github.com/apanariello4/annular-structures-netlogo/blob/main/Annular%20Structures%20in%20NetLogo%20Inspired%20by%20Brood%20Sorting%20in%20Ant%20Colonies.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ant-like-annular-sorting&#34;&gt;Ant-like annular sorting&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Leptothorax&lt;/em&gt; ants, sort their larvae in an annular structure. This is because they evolved to live in the narrow cracks in rocks, thus having almost a two dimensional environment. Different brood stages are arranged in concentric rings, in a single cluster around the eggs and micro-larvae.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/apanariello4/annular-structures-netlogo/blob/main/images/annularsorting.png?raw=true&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;theories&#34;&gt;Theories&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Wilson et. al&lt;/em&gt; (2004) were the first to study and implement such mechanisms. They followed two
+different theories.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Theory 1&lt;/strong&gt;: brood structures form simply because objects are of different size. This is called “muesli effect” where the small particles percolate to the bottom of the packet (Barker and Grimson, 1990).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Theory 2&lt;/strong&gt;: ants deliberately introduce spacing between brood items with the amount of spacing influenced by the size of the brood, detected by the amount of waste gas the brood produces.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;netlogo-setup&#34;&gt;NetLogo Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Robots are turtles which move in approximately straight lines, turning around when hitting a wall or another turtle.&lt;/li&gt;
+&lt;li&gt;Arena is square without warping.&lt;/li&gt;
+&lt;li&gt;6 robots and 15 objects per type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;performance-metrics&#34;&gt;Performance Metrics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Separation&lt;/strong&gt;: computed by calculating the radial distance from the centre of the structure for each object. Sorting these according to the type provides a lower and upper quartile for each type. The distance between an object type lower and upper quartile defines the type’s “home zone”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Compactness&lt;/strong&gt;: the ideal structure should be perfectly compact so that it fits into the smallest possible circular area. Finding the dimension of the circle is a complex geometrical problem, but the values for few object is known, so we take these to compare with our structure.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Shape&lt;/strong&gt;: we compute a clustering performance component that describes the central cluster and then we add the sum of the performances for each band.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mechanism-1-object-clustering-using-objects-of-different-size&#34;&gt;Mechanism 1: Object Clustering using Objects of Different Size&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 1: If (carrying object and obstacle ahead) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Make random turn away from obstacle.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 2: If (carrying object and hit another object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Reverse a small set distance which causes the object to be dropped.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Make random turn left or right.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 3: If (Not carrying any object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Go forward
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/apanariello4/annular-structures-netlogo/blob/main/images/method1.png?raw=true&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;mechanism-2-extended-differential-pullback&#34;&gt;Mechanism 2: Extended Differential Pullback&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 1: If (carrying object and obstacle ahead) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Make random turn away from obstacle and drop the object.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 2: If (carrying object and hit another object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            If (carrying Type 1 object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                Drop the object.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            Else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                Pullback a distance relative to the object type
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                and drop the object.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 3: If (Not carrying any object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Go forward
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/apanariello4/annular-structures-netlogo/raw/main/images/method2.png?raw=true&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;mechanism-3-mechanism-3-combined-leaky-integrator&#34;&gt;Mechanism 3: Mechanism 3: Combined Leaky Integrator&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 1: If (carrying object and obstacle ahead) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Make random turn away from obstacle.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 2: If (carrying object and hit another object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            If (carrying Type 1 object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                Drop the object and add 15 units to Type 1 integrator.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            Else If (carrying Type f object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                Pullback a distance relative to the sum of integrators 1 to f.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                Add 15 units to the Type f integrator.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 3: If (Not carrying any object) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Go forward
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rule 4: If (Time counter reaches threshold) then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Deduct 1 unit from all integrators and reset time counter.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/apanariello4/annular-structures-netlogo/raw/main/images/method3.png?raw=true&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;The Wilson et al study and my simulation, show that is indeed possible to have some sort of annular like sorting exploiting the behaviors of Leptothorax ants. We have seen that with simple algorithms, inspired by these ants, it is possible to reach good performances in the metrics that have been defined.&lt;/p&gt;
+&lt;p&gt;We have also found that the shape of the structure is influenced by the shape of the arena, thus it would be interesting to analyze this algorithm with different arena types.&lt;/p&gt;
+&lt;p&gt;In the future a probabilistic placement score, based on size and on the number of neighbors, for each object could be introduced, in order to let the agents to understand if it is beneficial to pick up or put down the objects.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Wilson, Matt, et al. &amp;ldquo;Algorithms for building annular structures with minimalist robots inspired by brood sorting in ant colonies.&amp;rdquo; Autonomous Robots 17.2 (2004): 115-136.&lt;/li&gt;
+&lt;li&gt;Franks, Nigel R., and Ana B. Sendova-Franks. &amp;ldquo;Brood sorting by ants: distributing the workload over the work-surface.&amp;rdquo; Behavioral Ecology and Sociobiology 30.2 (1992): 109-123.&lt;/li&gt;
+&lt;li&gt;Barker, G. C., and M. Grimson. &amp;ldquo;Physics of muesli: the science of powders.&amp;rdquo; New Scientist 126 (1990): 37-40.&lt;/li&gt;
+&lt;li&gt;Camazine, Scott. &amp;ldquo;Self-organizing pattern formation on the combs of honey bee colonies.&amp;rdquo; Behavioral ecology and sociobiology 28.1 (1991): 61-76.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Clean Air</title>
       <link>https://apanariello4.github.io/project/clean_air/</link>
       <pubDate>Tue, 18 May 2021 00:00:00 +0000</pubDate>

@@ -274,6 +274,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172153533-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-172153533-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -973,8 +1012,8 @@
     <h1>About Me</h1>
 
     <div class="article-style">
-      <p>My name is Aniello Panariello. I am a Research Fellow at the <a href="https://aimagelab.ing.unimore.it/" target="_blank" rel="noopener">AImageLab</a> research group of the University of Reggio Emilia, under the supervision of <a href="https://aimagelab.ing.unimore.it/imagelab/person.asp?idpersona=38" target="_blank" rel="noopener">Prof. Simone Calderara</a>. Here I am studying and developing novel Computer Vision and Deep Learning techniques. Before joining AImageLab I was head of the Computer Division for the Formula Student Team - MMR Driverless, where I worked on the perception of an autonomous racing car.</p>
-<p>My primary research focus is on Video Anomaly Detection, which consists of detecting anomalous human activities in video. The innate rarity of anomalies lead me to approach this problem in unsupervised and weakly supervised manners, to best exploit the few annotations available.</p>
+      <p>My name is Aniello Panariello. I am a Research Fellow at the <a href="https://aimagelab.ing.unimore.it/" target="_blank" rel="noopener">AImageLab</a> research group of the University of Reggio Emilia, under the supervision of <a href="https://aimagelab.ing.unimore.it/imagelab/person.asp?idpersona=38" target="_blank" rel="noopener">Prof. Simone Calderara</a>. Here I am studying and developing novel Computer Vision and Deep Learning techniques. Before joining AImageLab I was head of the Computer Division for the Formula Student Team - MMR Driverless, where I worked on the <strong>perception</strong> of an autonomous racing car.</p>
+<p>My primary research focus is on <strong>Video Anomaly Detection</strong>, which consists of detecting anomalous human activities in video. The innate rarity of anomalies lead me to approach this problem in unsupervised and weakly supervised manners, to best exploit the few annotations available.</p>
 <!-- 
   <i class="fas fa-download  pr-1 fa-fw"></i> Download my <a href="/uploads/demo_resume.pdf" target="_blank">resumé</a>. -->
 <p>Feel free to <a href="/#contact">reach me</a> for any question or curiosity.</p>
@@ -1161,7 +1200,7 @@
           
 
           <div class="card-text"><ul>
-<li>Developed a deep learning based software for the detection of video anomalous activities on public transport for the pan-European project InSecTT.</li>
+<li>Developed a deep learning based software for the detection of video anomalous activities on public transport for the pan-European project <strong>InSecTT</strong>.</li>
 <li>Studied and investigated techniques for data imbalance mitigation in anomaly detection problems.</li>
 <li>Introduced a novel consistency-based regulation loss for temporal anomaly localization in self-supervised learning settings.</li>
 <li>Developing of new techniques for video anomaly detection and video explaination using VAEs.</li>
@@ -1288,6 +1327,10 @@
     <div class="col py-2">
       <div class="card">
         <div class="card-body">
+          <div class="d-flex align-content-start">
+            <div class="mr-2 mb-2"><a href="http://www.applefoundationprogram.unisa.it/" target="_blank" rel="noopener"><img src="/media/icons/brands/ios.svg" width="56px" height="56px" alt="Apple Foundation Program @ University of Salerno" loading="lazy"></a></div>
+            <div>
+          
 
               <div class="section-subheading card-title exp-title text-muted my-0">iOS App Developer</div>
               <div class="section-subheading card-title exp-company text-muted my-0"><a href="http://www.applefoundationprogram.unisa.it/" target="_blank" rel="noopener">Apple Foundation Program @ University of Salerno</a></div>
@@ -1301,10 +1344,13 @@
                   <span>Salerno, Italy</span>
                 
               </div>
+            </div>
+          </div>
+          
 
           <div class="card-text"><ul>
 <li>Participated in the iOS Foundation Program, which improved my team-working, team-leading and app developing skills.</li>
-<li>Was the lead developer and project manager of the ”Kelnero” app (Swift).</li>
+<li>Was the lead developer and project manager of the &ldquo;Kelnero&rdquo; app (Swift).</li>
 </ul>
 </div>
         </div>
@@ -2191,6 +2237,105 @@
     
       
         
+          <div class="col-12 isotope-item js-id-NetLogo js-id-Distributed-Intelligence">
+        
+        
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<div class="col-lg-12 mb-5 view-showcase">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6">
+      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/annular/" >Annular Structures</a></div>
+
+      
+      <div class="article-style">
+        Simulation of Annular Structures building in ants nests.
+      </div>
+      
+
+      <div class="btn-links">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://github.com/apanariello4/annular-structures-netlogo" target="_blank" rel="noopener">
+    <i class="fab fa-github mr-1"></i>Code</a>
+
+
+      </div>
+
+    </div>
+    <div class="col-12 col-md-6 order-first ">
+      
+      
+      
+      <a href="/project/annular/" >
+        <img src="/project/annular/featured_hu416546ba7740594879d2a5dcc778394f_183421_540x0_resize_q75_h2_lanczos_3.webp" height="265" width="540"
+             alt="Annular Structures" loading="lazy">
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+      </div>
+    
+      
+        
           <div class="col-12 isotope-item js-id-IoT js-id-Deep-Learning">
         
         
@@ -2460,6 +2605,14 @@
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://drive.google.com/file/d/1L-o9mdmIdUJv4OrCxQTojpDUFcEUNpod/view?usp=sharing" target="_blank" rel="noopener">
+  Video
+</a>
+
 
 
 
@@ -2483,6 +2636,12 @@
     </div>
     <div class="col-12 col-md-6 order-first ">
       
+      
+      
+      <a href="/project/arposture/" >
+        <img src="/project/arposture/featured_hu1a6e17c31ae62061aced5c55e6225e10_28299_540x0_resize_q75_h2_lanczos.webp" height="282" width="540"
+             alt="ARPosture" loading="lazy">
+      </a>
       
     </div>
   </div>

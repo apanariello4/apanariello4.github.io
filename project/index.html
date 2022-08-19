@@ -256,6 +256,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172153533-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-172153533-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -786,6 +825,109 @@
   <div class="media-body">
 
     <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/project/annular/" >Annular Structures</a>
+    </div>
+
+    
+    <a href="/project/annular/"  class="summary-link">
+      <div class="article-style">
+        Simulation of Annular Structures building in ants nests.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/apanariello4/annular-structures-netlogo" target="_blank" rel="noopener">
+    <i class="fab fa-github mr-1"></i>Code</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/project/annular/" >
+      <img src="/project/annular/featured_hu416546ba7740594879d2a5dcc778394f_183421_150x0_resize_q75_h2_lanczos_3.webp" height="74" width="150"
+           alt="Annular Structures" loading="lazy">
+    </a>
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
       <a href="/project/clean_air/" >Clean Air</a>
     </div>
 
@@ -1047,6 +1189,14 @@
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://drive.google.com/file/d/1L-o9mdmIdUJv4OrCxQTojpDUFcEUNpod/view?usp=sharing" target="_blank" rel="noopener">
+  Video
+</a>
+
 
 
 
@@ -1071,6 +1221,12 @@
   </div>
   <div class="ml-3">
     
+    
+    
+    <a href="/project/arposture/" >
+      <img src="/project/arposture/featured_hu1a6e17c31ae62061aced5c55e6225e10_28299_150x0_resize_q75_h2_lanczos.webp" height="78" width="150"
+           alt="ARPosture" loading="lazy">
+    </a>
     
   </div>
 </div>

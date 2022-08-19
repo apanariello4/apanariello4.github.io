@@ -256,6 +256,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172153533-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-172153533-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -831,6 +870,14 @@
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://drive.google.com/file/d/1L-o9mdmIdUJv4OrCxQTojpDUFcEUNpod/view?usp=sharing" target="_blank" rel="noopener">
+  Video
+</a>
+
 
 
 
@@ -855,6 +902,12 @@
   </div>
   <div class="ml-3">
     
+    
+    
+    <a href="/project/arposture/" >
+      <img src="/project/arposture/featured_hu1a6e17c31ae62061aced5c55e6225e10_28299_150x0_resize_q75_h2_lanczos.webp" height="78" width="150"
+           alt="ARPosture" loading="lazy">
+    </a>
     
   </div>
 </div>
