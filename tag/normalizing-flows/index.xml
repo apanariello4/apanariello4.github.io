@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Video Anomaly Detection | Aniello Panariello</title>
-    <link>https://apanariello4.github.io/tag/video-anomaly-detection/</link>
-      <atom:link href="https://apanariello4.github.io/tag/video-anomaly-detection/index.xml" rel="self" type="application/rss+xml" />
-    <description>Video Anomaly Detection</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <title>Normalizing Flows | Aniello Panariello</title>
+    <link>https://apanariello4.github.io/tag/normalizing-flows/</link>
+      <atom:link href="https://apanariello4.github.io/tag/normalizing-flows/index.xml" rel="self" type="application/rss+xml" />
+    <description>Normalizing Flows</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://apanariello4.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Video Anomaly Detection</title>
-      <link>https://apanariello4.github.io/tag/video-anomaly-detection/</link>
+      <title>Normalizing Flows</title>
+      <link>https://apanariello4.github.io/tag/normalizing-flows/</link>
     </image>
     
     <item>
-      <title>Consistency-based Self-supervised Learning for Temporal Anomaly Localization</title>
-      <link>https://apanariello4.github.io/publication/panariello2022consistency/</link>
-      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://apanariello4.github.io/publication/panariello2022consistency/</guid>
+      <title>TrackFlow: Multi-Object tracking with Normalizing Flows</title>
+      <link>https://apanariello4.github.io/publication/mancusi2023trackflow/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://apanariello4.github.io/publication/mancusi2023trackflow/</guid>
       <description>&lt;!--
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
