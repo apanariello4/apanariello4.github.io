@@ -78,7 +78,7 @@
   
     
   
-  <meta name="description" content="A highly-customizable Hugo academic resume theme powered by Wowchemy website builder." />
+  <meta name="description" content="Embark on a Journey into Cutting-Edge Computer Vision and Deep Learning Research with a Passionate PhD Scholar." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://apanariello4.github.io/tag/academic/" />
@@ -90,6 +90,9 @@
   
 
   
+  
+    
+    <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -207,9 +210,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -256,7 +259,54 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7MTPV8KV4Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-7MTPV8KV4Y', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
   
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','G-7MTPV8KV4Y');
+</script>
 
 
   
@@ -296,7 +346,6 @@
   
   
     
-    
   
   
 
@@ -305,19 +354,19 @@
     
     
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
+    <meta property="twitter:site" content="@nellopanariello" />
+    <meta property="twitter:creator" content="@nellopanariello" />
   
   <meta property="og:site_name" content="Aniello Panariello" />
   <meta property="og:url" content="https://apanariello4.github.io/tag/academic/" />
   <meta property="og:title" content="Academic | Aniello Panariello" />
-  <meta property="og:description" content="A highly-customizable Hugo academic resume theme powered by Wowchemy website builder." /><meta property="og:image" content="https://apanariello4.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://apanariello4.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Embark on a Journey into Cutting-Edge Computer Vision and Deep Learning Research with a Passionate PhD Scholar." /><meta property="og:image" content="https://apanariello4.github.io/media/sharing.jpg" />
+    <meta property="twitter:image" content="https://apanariello4.github.io/media/sharing.jpg" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2020-12-13T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2023-01-10T00:00:00&#43;00:00" />
     
   
 
@@ -516,6 +565,43 @@
           
 
           <li class="nav-item">
+            <a class="nav-link " href="/#news"><span>News</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
             <a class="nav-link " href="/#posts"><span>Posts</span></a>
           </li>
 
@@ -553,81 +639,44 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#projects"><span>Projects</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#talks"><span>Talks</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
             <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
           </li>
 
           
@@ -784,13 +833,13 @@
   <div class="media-body">
 
     <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/getting-started/" >Welcome to Wowchemy, the website builder for Hugo</a>
+      <a href="/post/trackflow/" >TrackFlow - How Normalizing Flows can fuse multi-modal information for Multi-Object Tracking</a>
     </div>
 
     
-    <a href="/post/getting-started/"  class="summary-link">
+    <a href="/post/trackflow/"  class="summary-link">
       <div class="article-style">
-        Welcome 👋 We know that first impressions are important, so we&rsquo;ve populated your new site with some initial content to help you get familiar with everything in no time.
+        TrackFlow is a novel approach to multi-object tracking that leverages Normalizing Flows to learn a joint probability distribution over the costs of candidate associations.
       </div>
     </a>
     
@@ -813,8 +862,7 @@
     
 
   <span class="author-highlighted">
-      Aniello Panariello</span>, <span >
-      吳恩達</span>
+      Aniello Panariello</span>
   </div>
   
   
@@ -825,7 +873,7 @@
     
       
     
-    Dec 13, 2020
+    Jan 10, 2023
   </span>
   
 
@@ -834,7 +882,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -847,7 +895,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/demo/">Demo</a>, <a href="/category/%E6%95%99%E7%A8%8B/">教程</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/papers/">Papers</a></span>
   
 
 </div>
@@ -862,9 +910,9 @@
     
     
     
-    <a href="/post/getting-started/" >
-      <img src="/post/getting-started/featured_hub9ee31969f44a6711206a2baf9f065b4_241861_150x0_resize_q75_h2_lanczos.webp" height="84" width="150"
-           alt="Welcome to Wowchemy, the website builder for Hugo" loading="lazy">
+    <a href="/post/trackflow/" >
+      <img src="/post/trackflow/featured_hu70b4b8ea18748a541530ab92adb1b900_413432_150x0_resize_q75_h2_lanczos_3.webp" height="109" width="150"
+           alt="TrackFlow - How Normalizing Flows can fuse multi-modal information for Multi-Object Tracking" loading="lazy">
     </a>
     
   </div>
@@ -926,7 +974,7 @@
 
   
   <p class="powered-by copyright-license-text">
-    © 2022 Aniello Panariello. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2023 Aniello Panariello. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 
