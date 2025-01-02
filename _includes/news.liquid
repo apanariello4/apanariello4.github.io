@@ -16,7 +16,7 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <th scope="row" style="width: 20%">{{ item.date | date: '%b %Y' }}</th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
@@ -28,6 +28,11 @@
         {% endfor %}
       </table>
     </div>
+    {% if page.url != '/news/' %}
+      <div class="text-end mt-1 mb-4" style="text-align: right;">
+        <a href="{{ '/news/' | relative_url }}" class="small">View All News</a>
+      </div>
+    {% endif %}
   {% else %}
     <p>No news so far...</p>
   {% endif %}
