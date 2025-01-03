@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper Mask and Compress: Efficient Skeleton-based Action Recognition in Continual Learning has been accepted as an *oral* presentation at ICPR 2024.
+Our paper "Mask and Compress: Efficient Skeleton-based Action Recognition in Continual Learning" has been accepted as an *oral* presentation at ICPR 2024.

@@ -3,43 +3,82 @@
   author={Panariello, Aniello and Porrello, Angelo and Calderara, Simone and Cucchiara, Rita},
   booktitle={European Conference on Computer Vision Workshops},
   year=2022,
-  pdf=publication/panariello2022consistency/panariello2022consistency.pdf,
-  slides=publication/panariello2022consistency/consistency-based-2022-slides.pdf,
-  bibtex_show=publication/panariello2022consistency/cite.bib,
-  code=https://github.com/aimagelab/CSL-TAL
+  pdf={panariello2022consistency/panariello2022consistency.pdf},
+  slides={panariello2022consistency/consistency-based-2022-slides.pdf},
+  bibtex_show={true},
+  code={https://github.com/aimagelab/CSL-TAL},
+  abstract={This work tackles Weakly Supervised Anomaly detection, in which a predictor is allowed to learn not only from normal examples but also from a few labeled anomalies made available during training. In particular, we deal with the localization of anomalous activities within the video stream: this is a very challenging scenario, as training examples come only with video-level annotations (and not frame-level). Several recent works have proposed various regularization terms to address it *i.e.* by enforcing sparsity and smoothness constraints over the weakly-learned frame-level anomaly scores. In this work, we get inspired by recent advances within the field of self-supervised learning and ask the model to yield the same scores for different augmentations of the same video sequence. We show that enforcing such an alignment improves the performance of the model on XD-Violence.},
+  arxiv={2208.05251},
+  preview={csltal.png},
+  abbr={ECCVW'22}
 }
 
 @inproceedings{mancusi2023Trackflow,
 title={TrackFlow: Multi-Object tracking with Normalizing Flows},
 author={Mancusi, Gianluca and Panariello, Aniello and Porrello, Angelo and Fabbri, Matteo and Calderara, Simone and Cucchiara, Rita},
 booktitle={International Conference on Computer Vision},
-year=2023
+year=2023,
+selected={true},
+pdf={mancusi2023Trackflow/mancusi2023Trackflow.pdf},
+poster={mancusi2023trackflow/poster_trackflow_iccv2023.pdf},
+preview={trackflow.png},
+bibtex_show={true},
+abstract={The multi-object tracking field has recently seen a renewed interest in the good old schema of *tracking-by-detection*, as its simplicity and strong priors spare it from the complex design and painful babysitting of *tracking-by-attention* approaches. In view of this, we aim at extending tracking-by-detection to **multi-modal** settings, where a comprehensive cost has to be computed from heterogeneous information *e.g.* 2D motion cues, visual appearance, and pose estimates. More precisely, we follow a case study where a rough estimate of 3D information is also available and must be merged with other traditional metrics (*e.g.*, the IoU). To achieve that, recent approaches resort to either simple rules or complex heuristics to balance the contribution of each cost. However, *i)* they require careful tuning of tailored hyperparameters on a hold-out set, and *ii)* they imply these costs to be independent, which does not hold in reality. We address these issues by building upon an elegant probabilistic formulation, which considers the cost of a candidate association as the *negative log-likelihood* yielded by a deep density estimator trained to model the conditional joint probability distribution of correct associations. Our experiments, conducted on both simulated and real benchmarks, show that our approach consistently enhances the performance of several tracking-by-detection algorithms.},
+arxiv={2308.11513},
+abbr={ICCV'23}
 }
 
 @inproceedings{mosconi2024mask,
   title={Mask and Compress: Efficient Skeleton-based Action Recognition in Continual Learning},
   author={Mosconi, Matteo and Sorokin, Andriy and Panariello, Aniello and Porrello, Angelo and Bonato, Jacopo and Cotogni, Marco and Sabetta, Luigi and Calderara, Simone and Cucchiara, Rita},
-  booktitle={International Conference on Pattern Recognition (oral)},
-  year=2024
+  booktitle={International Conference on Pattern Recognition},
+  year=2024,
+  pdf={mosconi2024mask/mosconi2024mask.pdf},
+  bibtex_show={true},
+  preview={maskandcompress.png},
+  abbr={ICPR'24},
+  abstract={The use of skeletal data allows deep learning models to perform action recognition efficiently and effectively. Herein, we believe that exploring this problem within the context of Continual Learning is crucial. While numerous studies focus on skeleton-based action recognition from a traditional offline perspective, only a handful venture into online approaches. In this respect, we introduce CHARON (Continual Human Action Recognition On skeletoNs), which maintains consistent performance while operating within an efficient framework. Through techniques like uniform sampling, interpolation, and a memory-efficient training stage based on masking, we achieve improved recognition accuracy while minimizing computational overhead. Our experiments on Split NTU-60 and the proposed Split NTU-120 datasets demonstrate that CHARON sets a new benchmark in this domain. The code is available at https://github.com/Sperimental3/CHARON.},
+  code={https://github.com/Sperimental3/CHARON},
+  arxiv={2407.01397},
+  award={Oral Presentation},
+  award_name={Oral Presentation}
 }
 
-@inproceedings{panariello2024Monocular,
+@inproceedings{panariello2025Monocular,
   title={Monocular Per-Object Distance Estimation with Masked Object Modeling},
   author={Panariello, Aniello and Mancusi, Gianluca and Haj Ali, Fedy and Porrello, Angelo and Calderara, Simone and Cucchiara, Rita},
   booktitle={Under Review},
-  year=2024
+  year=2025
 }
 
 @inproceedings{frascaroli2024CLIP,
     author = {Frascaroli, Emanuele and Panariello, Aniello and Buzzega, Pietro and Bonicelli, Lorenzo and Porrello, Angelo and Calderara, Simone},
     title = {CLIP with Generative Latent Replay: a Strong Baseline for Incremental Learning},
-    booktitle = {British Machine Vision Conference (oral)},
-    year = 2024
+    booktitle = {British Machine Vision Conference},
+    year = 2024,
+    selected={true},
+    pdf={frascaroli2024CLIP/frascaroli2024CLIP.pdf},
+    bibtex_show={true},
+    preview={cgil.png},
+    abbr={BMVC'24},
+    abstract={With the emergence of Transformers and Vision-Language Models (VLMs) such as CLIP, large pre-trained models have become a common strategy to enhance performance in Continual Learning scenarios. This led to the development of numerous prompting strategies to effectively fine-tune transformer-based models without succumbing to catastrophic forgetting. However, these methods struggle to specialize the model on domains significantly deviating from the pre-training and preserving its zero-shot capabilities. In this work, we propose **Continual Generative training for Incremental prompt-Learning**, a novel approach to mitigate forgetting while adapting a VLM, which exploits generative replay to align prompts to tasks. We also introduce a new metric to evaluate zero-shot capabilities within CL benchmarks. Through extensive experiments on different domains, we demonstrate the effectiveness of our framework in adapting to new tasks while improving zero-shot capabilities. Further analysis reveals that our approach can bridge the gap with joint prompt tuning. The codebase is available at https://github.com/aimagelab/mammoth.},
+    code={https://github.com/aimagelab/mammoth},
+    arxiv={2407.15793},
+    award={Oral Presentation},
+    award_name={Oral Presentation}
 }
 
 @inproceedings{mancusi2024is,
     author = {Mancusi, Gianluca and Bernardi, Mattia and Panariello, Aniello and Porrello, Angelo and Calderara, Simone and Cucchiara, Rita},
     title = {Is Multiple Object Tracking a Matter of Specialization?},
     booktitle = {Advances in Neural Information Processing Systems},
-    year = 2024
+    year = 2024,
+    selected={true},
+    arxiv={2411.00553},
+    code={https://aimagelab.github.io/PASTA/},
+    abstract={End-to-end transformer-based trackers have achieved remarkable performance on most human-related datasets. However, training these trackers in heterogeneous scenarios poses significant challenges, including negative interference - where the model learns conflicting scene-specific parameters - and limited domain gener- alization, which often necessitates expensive fine-tuning to adapt the models to new domains. In response to these challenges, we introduce Parameter-efficient Scenario-specific Tracking A rchitecture (PASTA), a novel framework that com- bines Parameter-Efficient Fine-Tuning (PEFT) and Modular Deep Learning (MDL). Specifically, we define key scenario attributes (e.g., camera-viewpoint, lighting condition) and train specialized PEFT modules for each attribute. These expert modules are combined in parameter space, enabling systematic generalization to new domains without increasing inference time. Extensive experiments on MOT- Synth, along with zero-shot evaluations on MOT17 and PersonPath22 demonstrate that a neural tracker built from carefully selected modules surpasses its monolithic counterpart.},
+    preview={pasta.png},
+    abbr={NeurIPS'24},
+    bibtex_show={true},
+    pdf={mancusi2024is/mancusi2024is.pdf}
 }
