@@ -47,8 +47,17 @@ abbr={ICCV'23}
 @inproceedings{panariello2025Monocular,
   title={Monocular Per-Object Distance Estimation with Masked Object Modeling},
   author={Panariello, Aniello and Mancusi, Gianluca and Haj Ali, Fedy and Porrello, Angelo and Calderara, Simone and Cucchiara, Rita},
-  booktitle={Under Review},
-  year=2025
+  booktitle={Computer Vision and Image Understanding},
+  year=2025,
+  abbr={CVIU'25},
+  bibtex_show={true},
+  abstract={Per-object distance estimation is critical in surveillance and autonomous driving, where safety is crucial. While existing methods rely on geometric or deep supervised features, only a few attempts have been made to leverage self-supervised learning. In this respect, our paper draws inspiration from Masked Image Modeling (MiM) and extends it to multi-object tasks. While MiM focuses on extracting global image-level representations, it struggles with individual objects within the image. This is detrimental for distance estimation, as objects far away correspond to negligible portions of the image. Conversely, our strategy, termed Masked Object Modeling (MoM), enables a novel application of masking techniques. In a few words, we devise an auxiliary objective that reconstructs the portions of the image pertaining to the objects detected in the scene. The training phase is performed in a single unified stage, simultaneously optimizing the masking objective and the downstream loss (i.e., distance estimation). We evaluate the effectiveness of MoM on a novel reference architecture (DistFormer) on the standard KITTI, NuScenes, and MOTSynth datasets. Our evaluation reveals that our framework surpasses the SoTA and highlights its robust regularization properties. The MoM strategy enhances both zero-shot and few-shot capabilities, from synthetic to real domain. Finally, it furthers the robustness of the model in the presence of occluded or poorly detected objects.},
+  pdf={panariello2025Monocular/panariello2025Monocular.pdf},
+  code={https://github.com/apanariello4/DistFormer},
+  arxiv={2401.03191},
+  preview={DistFormer.png},
+  selected={true},
+
 }
 
 @inproceedings{frascaroli2024CLIP,
