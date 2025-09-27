@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "Is Multiple Object Tracking a Matter of Specialization?“ has been accepted at [NeurIPS 2024](https://neurips.cc/Conferences/2024).
+Our paper "[Is Multiple Object Tracking a Matter of Specialization?](https://arxiv.org/abs/2411.00553)“ has been accepted at [NeurIPS 2024](https://neurips.cc/Conferences/2024).

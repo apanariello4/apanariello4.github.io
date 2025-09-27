@@ -57,7 +57,6 @@ abbr={ICCV'23}
   arxiv={2401.03191},
   preview={DistFormer.png},
   selected={true},
-
 }
 
 @inproceedings{frascaroli2024CLIP,
@@ -90,4 +89,34 @@ abbr={ICCV'23}
     abbr={NeurIPS'24},
     bibtex_show={true},
     pdf={mancusi2024is/mancusi2024is.pdf}
+}
+
+@inproceedings{panariello2025modular,
+  title={Modular Embedding Recomposition for Incremental Learning},
+  author={Panariello, Aniello and Frascaroli, Emanuele and Buzzega, Pietro and Bonicelli, Lorenzo and Porrello, Angelo and Calderara, Simone},
+  booktitle = {British Machine Vision Conference},
+  year=2025,
+  abbr={BMVC'25},
+  bibtex_show={true},
+  abstract={The advent of pre-trained Vision-Language Models (VLMs) has significantly transformed Continual Learning (CL), mainly due to their zero-shot classification abilities. Such proficiency makes VLMs well-suited for real-world applications, enabling robust performance on novel unseen classes without requiring adaptation. However, fine-tuning remains essential when downstream tasks deviate significantly from the pre-training domain. Prior CL approaches primarily focus on preserving the zero-shot capabilities of VLMs during incremental fine-tuning on a downstream task. We take a step further by devising an approach that transforms preservation into enhancement of the zero-shot capabilities of VLMs. Our approach, named MoDular Embedding Recomposition (MoDER), introduces a modular framework that trains multiple textual experts, each specialized in a single seen class, and stores them in a foundational hub. At inference time, for each unseen class, we query the hub and compose the retrieved experts to synthesize a refined prototype that improves classification. We show the effectiveness of our method across two popular zero-shot incremental protocols, Class-IL and MTIL, comprising a total of 14 datasets.},
+  pdf={panariello2025modular/panariello2025modular.pdf},
+  code={https://github.com/aimagelab/mammoth},
+  arxiv={2508.16463},
+  preview={moder.png},
+  selected={true},
+}
+
+@inproceedings{panariello2025accurate,
+    title     = {Accurate and Efficient Low-Rank Model Merging in Core Space},
+    author    = {Panariello, Aniello and Marczak, Daniel and Magistri, Simone and Porrello, Angelo and Twardowski, Bart{\l}omiej and Bagdanov, Andrew D. and Calderara, Simone and van de Weijer, Joost},
+    booktitle = {Advances in Neural Information Processing Systems},
+    year = 2025,
+    selected={true},
+    arxiv={2509.17786},
+    code={https://github.com/apanariello4/core-space-merging},
+    abstract={In this paper, we address the challenges associated with merging low-rank adaptations of large neural networks. With the rise of parameter-efficient adaptation techniques, such as Low-Rank Adaptation (LoRA), model fine-tuning has become more accessible. While fine-tuning models with LoRA is highly efficient, existing merging methods often sacrifice this efficiency by merging fully-sized weight matrices. We propose the Core Space merging framework, which enables the merging of LoRA-adapted models within a common alignment basis, thereby preserving the efficiency of low-rank adaptation while substantially improving accuracy across tasks. We further provide a formal proof that projection into Core Space ensures no loss of information and provide a complexity analysis showing the efficiency gains. Extensive empirical results demonstrate that Core Space significantly improves existing merging techniques and achieves state-of-the-art results on both vision and language tasks while utilizing a fraction of the computational resources.},
+    preview={corespace.png},
+    abbr={NeurIPS'25},
+    bibtex_show={true},
+    pdf={panariello2025accurate/panariello2025accurate.pdf}
 }

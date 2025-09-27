@@ -6,7 +6,7 @@ subtitle: Ph.D. Student in Artificial Intelligence
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Tecnopolo, building MO-52</p>
