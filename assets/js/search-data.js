@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -44,28 +44,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-projects",
-              title: "projects",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-trackflow-how-normalizing-flows-can-fuse-multi-modal-information-for-multi-object-tracking",
+        },{id: "post-trackflow-how-normalizing-flows-can-fuse-multi-modal-information-for-multi-object-tracking",
       
         title: "TrackFlow - How Normalizing Flows can fuse multi-modal information for Multi-Object Tracking",
       
@@ -132,6 +111,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-we-released-the-preprint-for-our-work-gradient-sign-masking-for-task-vector-transport-across-pre-trained-models",
           title: 'We released the preprint for our work “Gradient-Sign Masking for Task Vector Transport...',
+          description: "",
+          section: "News",},{id: "news-i-attended-the-bmvc2025-conference-in-sheffield-united-kingdom",
+          title: 'I attended the BMVC2025 conference in Sheffield, United Kingdom.',
+          description: "",
+          section: "News",},{id: "news-i-attended-the-neurips2025-conference-in-san-diego-california-usa",
+          title: 'I attended the NeurIPS2025 conference in San Diego, California (USA).',
           description: "",
           section: "News",},{id: "projects-arposture",
           title: 'ARPosture',
