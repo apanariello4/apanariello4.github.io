@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I started an internship at [CVC](https://www.cvc.uab.es/) in Barcelona, Spain, under the supervision of [Joost van de Weijer](https://scholar.google.com/citations?user=Gsw2iUEAAAAJ).
+I started a visiting research period at [CVC](https://www.cvc.uab.es/) in Barcelona, Spain, under the supervision of [Joost van de Weijer](https://scholar.google.com/citations?user=Gsw2iUEAAAAJ).
