@@ -55,11 +55,11 @@ ninja.data = [{
           window.location.href = "/blog/2023/trackflow/";
         
       },
-    },{id: "news-our-paper-consistency-based-self-supervised-learning-for-temporal-anomaly-localization-has-been-accepted-at-eccv2022-workshops",
-          title: 'Our paper Consistency-based Self-supervised Learning for Temporal Anomaly Localization has been accepted at...',
-          description: "",
-          section: "News",},{id: "news-i-joined-the-aimagelab-group-at-unimore-in-italy-as-a-research-fellow",
+    },{id: "news-i-joined-the-aimagelab-group-at-unimore-in-italy-as-a-research-fellow",
           title: 'I joined the AImageLab group at UNIMORE in Italy as a Research Fellow....',
+          description: "",
+          section: "News",},{id: "news-our-paper-consistency-based-self-supervised-learning-for-temporal-anomaly-localization-has-been-accepted-at-eccv2022-workshops",
+          title: 'Our paper Consistency-based Self-supervised Learning for Temporal Anomaly Localization has been accepted at...',
           description: "",
           section: "News",},{id: "news-i-started-my-ph-d-in-information-and-communication-technologies-ict-at-aimagelab-with-topic-ai-techniques-for-time-series-analysis-and-prediction-exploiting-structured-information-granted-by-ammagamma",
           title: 'I started my Ph.D. in Information and Communication Technologies (ICT) at AImageLab, with...',
