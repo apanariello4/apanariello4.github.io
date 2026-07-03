@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student in Artificial Intelligence
+subtitle: Postdoctoral Researcher in Artificial Intelligence
 
 profile:
   align: right
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Tecnopolo, building MO-52</p>
+    <p>Unimore AI Center</p>
     <p>Via Pietro Vivarelli 10</p>
     <p>Modena, Italy 41125</p>
 
